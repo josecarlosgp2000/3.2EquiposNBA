@@ -17,7 +17,7 @@
                             <GradientStop Color="#FFDEFF0A" Offset="1"/>
                         </LinearGradientBrush>
                     </StackPanel.Background>
-                    <TextBlock TextWrapping="WrapWithOverflow" FontWeight="Bold" FontSize="30" TextAlignment="Center" Text="Los Angeles Lakers"></TextBlock>
+                    <TextBlock TextWrapping="Wrap" FontWeight="Bold" FontSize="30" TextAlignment="Center" Text="Los Angeles Lakers"></TextBlock>
                         <WrapPanel HorizontalAlignment="Center">
                         <Image Source="Contenido/23_lakers.png" Width="180"/>
                         <Image Source="Contenido/23_lakers.png" Width="180"></Image>
@@ -35,7 +35,7 @@
                             <GradientStop Color="#FFE40909" Offset="1"/>
                         </LinearGradientBrush>
                     </StackPanel.Background>
-                    <TextBlock TextAlignment="Center"  FontWeight="Bold" FontSize="30" TextWrapping="WrapWithOverflow" ><Run Text="Miami Heat" Foreground="White"/></TextBlock>
+                    <TextBlock TextAlignment="Center"  FontWeight="Bold" FontSize="30" TextWrapping="Wrap" ><Run Text="Miami Heat" Foreground="White"/></TextBlock>
 
                     <WrapPanel HorizontalAlignment="Center">
                         <Image Source="Contenido/99_heat.png" Width="180" />
