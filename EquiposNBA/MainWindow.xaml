@@ -6,43 +6,81 @@
         xmlns:local="clr-namespace:EquiposNBA"
         mc:Ignorable="d"
         Icon="Contenido/shaq.ico"
-        Title="Nba" Height="450" Width="1100">
+        Title="Nba" Height="450" Width="1100" MinWidth="300">
+
+    <Window.Resources>
+        <Style TargetType="{x:Type Image}">
+            <Setter Property="Width" Value="180"></Setter>
+        </Style>
+
+        <Style TargetType="{x:Type Border}" x:Key="borde">
+            <Setter Property="BorderThickness" Value="3"></Setter>
+            <Setter Property="CornerRadius" Value="3"></Setter>
+            <Setter Property="BorderBrush" Value="Black"></Setter>
+            <Setter Property="Margin" Value="10"></Setter>
+        </Style>
+        <Style TargetType="{x:Type StackPanel}" x:Key="Lakers">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF6C18B2" Offset="0.337"/>
+                        <GradientStop Color="#FFDEFF0A" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="{x:Type StackPanel}" x:Key="MiamiHeat">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="0"/>
+                        <GradientStop Color="#FFE40909" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="{x:Type TextBlock}">
+            <Setter Property="TextWrapping" Value="WrapWithOverflow"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+            <Setter Property="TextAlignment" Value="Center"></Setter>
+            <Setter Property="FontSize" Value="30"></Setter>
+        </Style>
+        <Style TargetType="{x:Type TextBlock}" x:Key="enunciadoLakers" BasedOn="{StaticResource {x:Type TextBlock}}">
+            <Setter Property="Text" Value="Los Angeles Lakers"></Setter>
+            <Setter Property="Foreground" Value="Black"></Setter>
+        </Style>
+        <Style TargetType="{x:Type TextBlock}" x:Key="enunciadoMiami" BasedOn="{StaticResource {x:Type TextBlock}}">
+            <Setter Property="Text" Value="Miami Heat"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+        </Style>
+
+
+
+    </Window.Resources>
     <Grid>
         <StackPanel>
-            <Border BorderThickness="3" CornerRadius="3" BorderBrush="Black" Margin="10">
-                <StackPanel>
-                    <StackPanel.Background>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="#FF6C18B2" Offset="0.337"/>
-                            <GradientStop Color="#FFDEFF0A" Offset="1"/>
-                        </LinearGradientBrush>
-                    </StackPanel.Background>
-                    <TextBlock TextWrapping="Wrap" FontWeight="Bold" FontSize="30" TextAlignment="Center" Text="Los Angeles Lakers"></TextBlock>
+            <Border Style="{StaticResource borde}">
+                <StackPanel Style="{StaticResource Lakers}">
+                    <TextBlock Style="{StaticResource enunciadoLakers}"></TextBlock>
                         <WrapPanel HorizontalAlignment="Center">
-                        <Image Source="Contenido/23_lakers.png" Width="180"/>
-                        <Image Source="Contenido/23_lakers.png" Width="180"></Image>
-                        <Image Source="Contenido/23_lakers.png" Width="180"></Image>
-                        <Image Source="Contenido/23_lakers.png" Width="180"></Image>
-                        <Image Source="Contenido/23_lakers.png" Width="180"></Image>
+                        <Image Source="Contenido/23_lakers.png"/>
+                        <Image Source="Contenido/23_lakers.png"></Image>
+                        <Image Source="Contenido/23_lakers.png"></Image>
+                        <Image Source="Contenido/23_lakers.png"></Image>
+                        <Image Source="Contenido/23_lakers.png"></Image>
                     </WrapPanel>
                 </StackPanel>
             </Border>
-            <Border BorderThickness="3" CornerRadius="3" BorderBrush="Black" Margin="10">
-                <StackPanel>
-                    <StackPanel.Background>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="Black" Offset="0"/>
-                            <GradientStop Color="#FFE40909" Offset="1"/>
-                        </LinearGradientBrush>
-                    </StackPanel.Background>
-                    <TextBlock TextAlignment="Center"  FontWeight="Bold" FontSize="30" TextWrapping="Wrap" ><Run Text="Miami Heat" Foreground="White"/></TextBlock>
-
+            <Border Style="{StaticResource borde}">
+                <StackPanel Style="{StaticResource MiamiHeat}">
+                    <TextBlock Style="{StaticResource enunciadoMiami}"></TextBlock>
                     <WrapPanel HorizontalAlignment="Center">
-                        <Image Source="Contenido/99_heat.png" Width="180" />
-                        <Image Source="Contenido/13_heat.png" Width="180"></Image>
-                        <Image Source="Contenido/14_heat.png" Width="180"></Image>
-                        <Image Source="Contenido/22_heat.png" Width="180"></Image>
-                        <Image Source="Contenido/7_heat.png" Width="180"></Image>
+                        <Image Source="Contenido/99_heat.png"/>
+                        <Image Source="Contenido/13_heat.png"></Image>
+                        <Image Source="Contenido/14_heat.png"></Image>
+                        <Image Source="Contenido/22_heat.png"></Image>
+                        <Image Source="Contenido/7_heat.png"></Image>
                     </WrapPanel>
                 </StackPanel>
             </Border>
